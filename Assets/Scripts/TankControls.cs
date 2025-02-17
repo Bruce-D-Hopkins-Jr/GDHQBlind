@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class TankControls : MonoBehaviour
 {
+    [SerializeField] Rigidbody _rb;
+    [SerializeField] TankGun _tankGun;
     [SerializeField] WheelCollider[] _leftWheels;
     [SerializeField] WheelCollider[] _rightWheels;
     [SerializeField] GameObject _turret;
     [SerializeField] GameObject _gun;
 
     TankControlInputs _tankControlInputs;
+    [SerializeField] private TankClass _tankClass;
+
     [SerializeField] private float _tankTorque = 5000f;
     [SerializeField] private float _tankHealth = 500f;
     [SerializeField] private float _turretSpeed = 10f;
@@ -24,6 +28,20 @@ public class TankControls : MonoBehaviour
         _tankControlInputs = new TankControlInputs();
         _tankControlInputs.Tank.Enable();
 
+        if (_tankClass != null)
+        {
+            _tankTorque = _tankClass.tankTorque;
+            _tankHealth = _tankClass.tankHealth;
+            _turretSpeed = _tankClass.turretSpeed;
+            _barrelSpeed = _tankClass.barrelSpeed;
+
+            _rb.mass = _tankClass.mass;
+
+            if (_tankGun != null)
+                _tankGun.InitWeapon(_tankClass.weapon, _uiManager);
+        }
+
+        
     }
 
     private void FixedUpdate()

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bb18bf51f4afa4da3a9f6d1506ec24, type: 3}
   m_Name: BruteTank
   m_EditorClassIdentifier: 
-  weight: 100000
+  weapon: {fileID: 11400000, guid: da1c048143512224c81e908857705734, type: 2}
+  mass: 50000
   tankSpeed: 8
+  tankTorque: 250000
   turretSpeed: 5
   barrelSpeed: 5
   tankHealth: 2000

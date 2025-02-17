@@ -7,6 +7,7 @@ using UnityEngine;
 public class TankWeapon : ScriptableObject
 {
     public GameObject GunProjectile;
+    public Sprite DisplayImage;
     public float MuzzleVelocity = 100f;
     public float FireDelay = 0.1f;
     public float ReloadDelay = 2f;

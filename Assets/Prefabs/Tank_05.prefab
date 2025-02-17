@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7955132696692105102}
   - component: {fileID: 4571033298184268570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel01 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3316463297220843471}
   - component: {fileID: 3906573085341851993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel08 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6313837013572397104}
   - component: {fileID: 1429193893454102532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel05 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1646607484257950898}
   - component: {fileID: 6495656165763358291}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel02 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6243392621439216434}
   - component: {fileID: 4506344891864576923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel06 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 527773413380228414}
   - component: {fileID: 9167288011029268436}
   - component: {fileID: 3777489122789646481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9118795497694706512}
   - component: {fileID: 184831834901954261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel07 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8279145655188243157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ProjectilePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2535697442620305323}
   - component: {fileID: 8384123300470792798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel04 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921817603064354260}
   - component: {fileID: 3269297389375003087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel03 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7783444649037487736}
   - component: {fileID: 4416063726289376531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel10 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656011375281085261}
   - component: {fileID: 4035405260557505408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tank_05_Wheel09 Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,49 +886,121 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_Name
       value: Tank_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100028, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100030, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 909b45c747dfc4834990f0b45fe4aa2e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1299,6 +1371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589518fcdaccbbf44a3eca5f76f61728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 126477604633077183}
+  _tankGun: {fileID: 3583904660360965618}
   _leftWheels:
   - {fileID: 6495656165763358291}
   - {fileID: 8384123300470792798}
@@ -1313,6 +1387,7 @@ MonoBehaviour:
   - {fileID: 4035405260557505408}
   _turret: {fileID: 31670777999373349}
   _gun: {fileID: 31670777999373359}
+  _tankClass: {fileID: 11400000, guid: 0719c3d745b81aa47a9f54c2c7ab88c5, type: 2}
   _tankTorque: 500000
   _tankHealth: 500
   _turretSpeed: 10
@@ -1330,8 +1405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9daaf6bf0656bc4fb849b35b08c6116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showLogging: 0
   _firePoint: {fileID: 0}
-  _uiManager: {fileID: 0}
+  _maxProjectileDistance: 100
+  _weapon: {fileID: 0}
 --- !u!1 &31670777999373359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 909b45c747dfc4834990f0b45fe4aa2e,
