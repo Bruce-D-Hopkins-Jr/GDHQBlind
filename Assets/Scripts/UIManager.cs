@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public void SetGunSights(Vector3 uiPosition, float distance)
     {
         _gunSights.enabled = true;
-        _gunSights.rectTransform.anchoredPosition = (Vector2)uiPosition;
+        _gunSights.rectTransform.position = (Vector2)uiPosition;
 
         // We probably should change the size of the sight based on the distance
     }

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spear
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d473ca79d5c85664fb317a5df373aa74, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d473ca79d5c85664fb317a5df373aa74, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -64,6 +68,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9036149806023183830}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: d473ca79d5c85664fb317a5df373aa74,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1789636508080851058}
   m_SourcePrefab: {fileID: 100100000, guid: d473ca79d5c85664fb317a5df373aa74, type: 3}
 --- !u!1 &4437192476176666016 stripped
 GameObject:
@@ -97,7 +105,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &9036149806023183830
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -118,6 +126,19 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1
-  m_Height: 2
+  m_Height: 0.5
   m_Direction: 2
-  m_Center: {x: 0.0004351586, y: -0.017177273, z: 0.045388877}
+  m_Center: {x: 0.0004351586, y: -0.017177273, z: 0.34}
+--- !u!114 &1789636508080851058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437192476176666016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68781ac26b7b18e4e8f19cfd81e02f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8292937822358123116}

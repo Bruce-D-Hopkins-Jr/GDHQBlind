@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SQLite-net Official Portable Library")]
-[assembly: AssemblyDescription("Light weight library providing easy SQLite database storage")]
+[assembly: AssemblyDescription("Light mass library providing easy SQLite database storage")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Krueger Systems, Inc.")]
 [assembly: AssemblyProduct("SQLite-net")]
