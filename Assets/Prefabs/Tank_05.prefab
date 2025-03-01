@@ -1406,9 +1406,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showLogging: 0
+  _includeLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   _firePoint: {fileID: 0}
   _maxProjectileDistance: 100
   _weapon: {fileID: 0}
+  _allWeapons: []
+  ammo: 0
+  maxAmmo: 0
 --- !u!1 &31670777999373359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 909b45c747dfc4834990f0b45fe4aa2e,

@@ -62,6 +62,15 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CycleWeapons"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d02d111-f6cb-402e-bb43-313fa33bb9b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -306,6 +315,17 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Turret"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bbc0a6c2-ca17-4531-ae2a-ac00d93badcf"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CycleWeapons"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -318,6 +338,7 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
         m_Tank_RightTread = m_Tank.FindAction("Right Tread", throwIfNotFound: true);
         m_Tank_Turret = m_Tank.FindAction("Turret", throwIfNotFound: true);
         m_Tank_Fire = m_Tank.FindAction("Fire", throwIfNotFound: true);
+        m_Tank_CycleWeapons = m_Tank.FindAction("CycleWeapons", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -383,6 +404,7 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Tank_RightTread;
     private readonly InputAction m_Tank_Turret;
     private readonly InputAction m_Tank_Fire;
+    private readonly InputAction m_Tank_CycleWeapons;
     public struct TankActions
     {
         private @TankControlInputs m_Wrapper;
@@ -391,6 +413,7 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
         public InputAction @RightTread => m_Wrapper.m_Tank_RightTread;
         public InputAction @Turret => m_Wrapper.m_Tank_Turret;
         public InputAction @Fire => m_Wrapper.m_Tank_Fire;
+        public InputAction @CycleWeapons => m_Wrapper.m_Tank_CycleWeapons;
         public InputActionMap Get() { return m_Wrapper.m_Tank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -412,6 +435,9 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
             @Fire.started += instance.OnFire;
             @Fire.performed += instance.OnFire;
             @Fire.canceled += instance.OnFire;
+            @CycleWeapons.started += instance.OnCycleWeapons;
+            @CycleWeapons.performed += instance.OnCycleWeapons;
+            @CycleWeapons.canceled += instance.OnCycleWeapons;
         }
 
         private void UnregisterCallbacks(ITankActions instance)
@@ -428,6 +454,9 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
             @Fire.started -= instance.OnFire;
             @Fire.performed -= instance.OnFire;
             @Fire.canceled -= instance.OnFire;
+            @CycleWeapons.started -= instance.OnCycleWeapons;
+            @CycleWeapons.performed -= instance.OnCycleWeapons;
+            @CycleWeapons.canceled -= instance.OnCycleWeapons;
         }
 
         public void RemoveCallbacks(ITankActions instance)
@@ -451,5 +480,6 @@ public partial class @TankControlInputs: IInputActionCollection2, IDisposable
         void OnRightTread(InputAction.CallbackContext context);
         void OnTurret(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnCycleWeapons(InputAction.CallbackContext context);
     }
 }

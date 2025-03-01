@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunProjectile: {fileID: 4437192476176666016, guid: 294bb87daa0075f448f12fedae54830a,
     type: 3}
+  DisplayImage: {fileID: 21300032, guid: 6bd0f56a86a1848f79e3c884b14c5c68, type: 3}
   MuzzleVelocity: 200
   FireDelay: 0.05
   ReloadDelay: 0.5
   ClipSize: 10
+  currentAmmo: 20
+  maxAmmo: 20
+  soundNum: 2
