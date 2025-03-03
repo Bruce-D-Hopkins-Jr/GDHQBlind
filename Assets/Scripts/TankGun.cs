@@ -20,9 +20,9 @@ public class TankGun : MonoBehaviour
     [SerializeField] TankWeapon _weapon;
 
     // this is optional
-   [SerializeField] List<TankWeapon> _allWeapons;
+    [SerializeField] List<TankWeapon> _allWeapons;
 
-   int weaponIndex;
+    int weaponIndex;
 
     UIManager _uiManager;
 
@@ -30,17 +30,21 @@ public class TankGun : MonoBehaviour
 
     [SerializeField] int ammo;
     [SerializeField] int maxAmmo;
- 
-        /// if you want to delete the ability to cycle weapons
-        /// switch from _allWeapons[weaponIndex] to _weapon for every method and variables
-        /// example: ammo = _weapon.currentAmmo
-        /// example: uiManager.DisplayName(_weapon.name)
-        /// Also, this can work with the "Clip size" variable 
+
+    [SerializeField] float fireRate;
+
+    private float _timePassed;
+
+    /// if you want to delete the ability to cycle weapons
+    /// switch from _allWeapons[weaponIndex] to _weapon for every method and variables
+    /// example: ammo = _weapon.currentAmmo
+    /// example: uiManager.DisplayName(_weapon.name)
+    /// Also, this can work with the "Clip size" variable 
     private void Start()
     {
         _tankControlInputs = new TankControlInputs();
         _tankControlInputs.Tank.Enable();
-     
+
 
         _tankControlInputs.Tank.Fire.performed += Fire_performed;
         _tankControlInputs.Tank.CycleWeapons.performed += Cycle_performed;
@@ -49,16 +53,16 @@ public class TankGun : MonoBehaviour
 
     private void Cycle_performed(InputAction.CallbackContext context)
     {
-       weaponIndex++;
-       if(weaponIndex >= _allWeapons.Count)
-       {
-        weaponIndex = 0;
-       }
-       _weapon = _allWeapons[weaponIndex];
-       _uiManager.UpdateAmmo(_allWeapons[weaponIndex].currentAmmo, _allWeapons[weaponIndex].maxAmmo);
-       _uiManager.DisplayWeaponName(_allWeapons[weaponIndex].name);
-       _uiManager.DisplayWeaponType(_allWeapons[weaponIndex].DisplayImage);
-        
+        weaponIndex++;
+        if (weaponIndex >= _allWeapons.Count)
+        {
+            weaponIndex = 0;
+        }
+        _weapon = _allWeapons[weaponIndex];
+        _uiManager.UpdateAmmo(_allWeapons[weaponIndex].currentAmmo, _allWeapons[weaponIndex].maxAmmo);
+        _uiManager.DisplayWeaponName(_allWeapons[weaponIndex].name);
+        _uiManager.DisplayWeaponType(_allWeapons[weaponIndex].DisplayImage);
+
         ammo = _allWeapons[weaponIndex].currentAmmo;
         maxAmmo = _allWeapons[weaponIndex].maxAmmo;
         /// change class
@@ -68,19 +72,19 @@ public class TankGun : MonoBehaviour
         /// Sound Here
 
 
-       
+
     }
 
     private void InitStats()
     {
-       
+
         ammo = _allWeapons[weaponIndex].currentAmmo;
         maxAmmo = _allWeapons[weaponIndex].maxAmmo;
         displayWeapon = true;
-        
-       _weapon = _allWeapons[0];
-       _allWeapons[weaponIndex].Start();
-       ammo = maxAmmo;
+
+        _weapon = _allWeapons[0];
+        _allWeapons[weaponIndex].Start();
+        ammo = maxAmmo;
 
     }
 
@@ -98,12 +102,15 @@ public class TankGun : MonoBehaviour
 
     private void Fire_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        FireGun();
+        if (Time.time > _timePassed)
+        { FireGun(); }
     }
 
     private void FireGun()
     {
-
+        // no spamming the fire button/ this is also for audio
+        _timePassed = Time.time + fireRate;
+        // can clamp this if you want to.
         if (_weapon == null)
         {
             Debug.LogError("Weapon is null");
@@ -122,7 +129,7 @@ public class TankGun : MonoBehaviour
             displayWeapon = true;
             ammo--;
             AudioManager.Instance.PlaySFX(_allWeapons[weaponIndex].soundNum);
-          // _allWeapons[weaponIndex].currentAmmo--;
+            // _allWeapons[weaponIndex].currentAmmo--;
             // Instantiate the projectile
             GameObject projectile = Instantiate(_weapon.GunProjectile, _firePoint.position, _firePoint.rotation);
             // Add force
@@ -135,14 +142,14 @@ public class TankGun : MonoBehaviour
                 AudioManager.Instance.StopPlayingSFX(_allWeapons[weaponIndex].soundNum);
                 displayWeapon = false;
 
-            //while the weapons amount is greater than zero
-                if(_allWeapons.Count > 0)
+                //while the weapons amount is greater than zero
+                if (_allWeapons.Count > 0)
                 {
-                  
+
                     _allWeapons.Remove(_weapon);
                     //_weapon = _allWeapons[weaponIndex - 1];
                 }
-                
+
             }
         }
 
@@ -201,15 +208,15 @@ public class TankGun : MonoBehaviour
         {
             _uiManager.DisableWeaponType();
             _uiManager.DisplayWeaponName(string.Empty);
-          
-            
+
+
             //it works, but it is better not to null the weapon
-             // _weapon = null;
+            // _weapon = null;
         }
 
-        
+
         // _uiManager.UpdateAmmo(_allWeapons[weaponIndex].currentAmmo,_allWeapons[weaponIndex].maxAmmo);
-           _uiManager.UpdateAmmo(ammo,maxAmmo);
+        _uiManager.UpdateAmmo(ammo, maxAmmo);
 
     }
 }

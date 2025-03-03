@@ -36,7 +36,9 @@ public class AudioManager : Singleton<AudioManager>
     }
     public void PlaySFX(int _index) // one singular shot
     {
+        
       sfxIndex = _index;
+      
         if (_index < sfx.Length)
         {
             // reduce the pitch
@@ -66,11 +68,18 @@ public class AudioManager : Singleton<AudioManager>
         bgm[index].Play();
     }
 
-    private void StopAllBG()
+    public void StopAllBG()
     {
         for (int i = 0; i < bgm.Length; i++)
         {
             bgm[i].Stop();
+        }
+    }
+    public void StopAllSFX() // other 
+    {
+        for (int i = 0; i < sfx.Length; i++)
+        {
+              sfx[i].Stop();
         }
     }
     

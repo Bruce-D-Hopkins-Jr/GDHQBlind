@@ -91,4 +91,12 @@ public class TankControls : MonoBehaviour
         _turret.transform.Rotate(transform.up * _turretVal.x * _turretSpeed * Time.fixedDeltaTime, Space.Self);
         _gun.transform.Rotate(-transform.right * _turretVal.y * _barrelSpeed * Time.fixedDeltaTime, Space.Self);
     }
+
+    private void SavePosition()
+    {
+        /// incase this main one dies
+    }
+
+    /// One could create a public void to make this object to stop and start moving?
+   
 }

@@ -21,4 +21,4 @@ MonoBehaviour:
   ClipSize: 1
   currentAmmo: 15
   maxAmmo: 15
-  soundNum: 4
+  soundNum: 1
