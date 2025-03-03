@@ -48,6 +48,10 @@ public class AudioManager : Singleton<AudioManager>
     }
     public void PlayLongSFX(int _index)
     {
+        /// if you do not more than one SFX playing
+        /// use this: 
+        /// if(sfx[_index].isPlaying) return;
+        
         sfxIndex = _index;
         if (_index < sfx.Length)
         {
