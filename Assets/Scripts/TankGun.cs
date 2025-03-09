@@ -33,6 +33,8 @@ public class TankGun : MonoBehaviour
 
     [SerializeField] float fireRate;
 
+    [SerializeField] private ParticleSystem _muzzleFlash;
+
     private float _timePassed;
 
     /// if you want to delete the ability to cycle weapons
@@ -134,7 +136,11 @@ public class TankGun : MonoBehaviour
             GameObject projectile = Instantiate(_weapon.GunProjectile, _firePoint.position, _firePoint.rotation);
             // Add force
             projectile.GetComponent<Rigidbody>().AddForce(_firePoint.forward * _weapon.MuzzleVelocity, ForceMode.VelocityChange);
+
             // Particle effects?
+            if (_muzzleFlash != null)
+                _muzzleFlash.Play();
+
             if (_showLogging)
                 Debug.Log("Boom!");
             if (ammo == 0)

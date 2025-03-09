@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Underwater City.unity
     guid: 028b60314e394de45a6eb6619d5c0606
   - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 23c6ed31545bcd24187309e26f651f50
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fa83af10fdf7a4d4caac3385c027def8,

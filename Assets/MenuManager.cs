@@ -48,6 +48,9 @@ public class MenuManager : Singleton<MenuManager>
 
         _tankControlInputs.UI.Cancel.performed += CloseMenu_Performed;
         _tankControlInputs.UI.Pause.performed += PauseMenuOpened;
+
+        //hide the cursor until paused
+        Cursor.visible = false;
     }
 
     private void PauseMenuOpened(InputAction.CallbackContext context)
@@ -96,9 +99,11 @@ public class MenuManager : Singleton<MenuManager>
         isMenuOpen = true;
         menuPanel.SetActive(true);
         isPaused = true;
-       // AudioManager.Instance.StopAllBG();
-       // AudioManager.Instance.StopAllSFX();
-        
+        // AudioManager.Instance.StopAllBG();
+        // AudioManager.Instance.StopAllSFX();
+
+        //set cursor active
+        Cursor.visible = true;
     }
 
     public void CloseMenu() //  the button on the right corner of the window
@@ -107,8 +112,9 @@ public class MenuManager : Singleton<MenuManager>
         menuPanel.SetActive(false);
         optionsPanel.SetActive(false);
         isPaused = false;
-      
 
+        //hide cursor
+        Cursor.visible = false;
     }
     #region Options Menu
 
