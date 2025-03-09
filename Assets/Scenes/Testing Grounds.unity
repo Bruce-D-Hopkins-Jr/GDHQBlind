@@ -238,6 +238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gunSights: {fileID: 2123207417}
+  ammoAmountText: {fileID: 0}
+  weaponName: {fileID: 0}
+  _weaponDisplay: {fileID: 0}
 --- !u!1001 &850484026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,6 +439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741405062439499883, guid: 0b876b9133707a641a7c33d33bd80ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4884797740572434074, guid: 0b876b9133707a641a7c33d33bd80ec2,
         type: 3}
